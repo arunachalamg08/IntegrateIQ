@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-950 text-slate-100 font-sans antialiased;
+    background-color: #070A0F;
+  }
+
+  /* Custom scrollbar for developer tools aesthetic */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0F17;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E2D4A;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2B3D63;
+  }
+}
+
+/* Subtle code syntax colors */
+.token-keyword { color: #F472B6; }
+.token-string { color: #34D399; }
+.token-function { color: #60A5FA; }
+.token-comment { color: #64748B; font-style: italic; }
+.token-variable { color: #FBBF24; }
+.token-number { color: #A78BFA; }
+.token-operator { color: #94A3B8; }
+
+/* Subtle pulse for simulated running states */
+@keyframes softPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
